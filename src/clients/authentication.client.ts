@@ -10,7 +10,7 @@ export class AuthenticationClient {
   constructor(private http: HttpClient) {}
   public login(username: string, password: string): Observable<string> {
     return this.http.post(
-      environment.apiUrl + '/user/login',
+      environment.apiUrl + '/login',
       {
         username: username,
         password: password,
@@ -24,7 +24,7 @@ export class AuthenticationClient {
     password: string
   ): Observable<string> {
     return this.http.post(
-      environment.apiUrl + '/user/register',
+      environment.apiUrl + '/register',
       {
         username: username,
         email: email,
